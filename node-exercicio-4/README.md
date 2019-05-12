@@ -1,5 +1,3 @@
-# desafio1-node
-
 # Teste projeto node 4
 
 Este projeto codifica e decodifica mensagens de um arquivo.
