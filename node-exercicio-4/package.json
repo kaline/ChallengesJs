@@ -1,0 +1,24 @@
+{
+  "name": "exercicio-4",
+  "version": "1.0.0",
+  "description": "projeto 4 do nodejs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kaline/desafio4-node.git"
+  },
+  "keywords": [
+    "nodejs",
+    "desafio4",
+    "defrador"
+  ],
+  "author": "kaline",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kaline/desafio4-node/issues"
+  },
+  "homepage": "https://github.com/kaline/desafio4-node#readme"
+}
