@@ -1,7 +1,23 @@
-'use strict';
+'use strict'
+let fs = require('fs')
 
-let data = 'Q2F6dXphIC0gUG9lbWEKCkV1IGhvamUgdGl2ZSB1bSBwZXNhZGVsbwpFIGxldmFudGVpIGF0ZW50bywgYSB0ZW1wbwpFdSBhY29yZGVpIGNvbSBtZWRvCkUgcHJvY3VyZWkgbm8gZXNjdXJvCkFsZ3XDqW0gY29tIG8gc2V1IGNhcmluaG8KRSBsZW1icmVpIGRlIHVtIHRlbXBvCgpQb3JxdWUgbyBwYXNzYWRvIG1lIHRyYXogdW1hIGxlbWJyYW7Dp2EKRG8gdGVtcG8gcXVlIGV1IGVyYSBjcmlhbsOnYQpFIG8gbWVkbyBlcmEgbW90aXZvIGRlIGNob3JvCkRlc2N1bHBhIHByYSB1bSBhYnJhw6dvIG91IHVtIGNvbnNvbG8KCkhvamUgZXUgYWNvcmRlaSBjb20gbWVkbwpNYXMgbsOjbyBjaG9yZWksIG5lbSByZWNsYW1laSBhYnJpZ28KRG8gZXNjdXJvLCBldSB2aWEgbyBpbmZpbml0bwpTZW0gcHJlc2VudGUsIHBhc3NhZG8gb3UgZnV0dXJvClNlbnRpIHVtIGFicmHDp28gZm9ydGUsIGrDoSBuw6NvIGVyYSBtZWRvCkVyYSB1bWEgY29pc2Egc3VhIHF1ZSBmaWNvdSBlbSBtaW0KRSBxdWUgbsOjbyB0ZW0gZmltCgpEZSByZXBlbnRlLCBhIGdlbnRlIHbDqiBxdWUgcGVyZGV1Ck91IGVzdMOhIHBlcmRlbmRvIGFsZ3VtYSBjb2lzYQpNb3JuYSBlIGluZ8OqbnVhIHF1ZSB2YWkgZmljYW5kbyBubyBjYW1pbmhvClF1ZSDDqSBlc2N1cm8gZSBmcmlvLCBtYXMgdGFtYsOpbSBib25pdG8gcG9ycXVlIMOpIGlsdW1pbmFkbwpQZWxhIGJlbGV6YSBkbyBxdWUgYWNvbnRlY2V1IGjDoSBtaW51dG9zIGF0csOhcw==';  
-let buff = new Buffer(data, 'base64');  
-let text = buff.toString('ascii');
 
-console.log('"' + data + '" converted from Base64 to ASCII is "' + text + '"'); 
+let filename = process.argv[3];
+let texto;
+let data;
+let fileContents = fs.readFileSync(filename); 
+
+let buff = Buffer.from(fileContents);
+
+if(process.argv[2] ==  "decifra"){
+	texto = buff.toString('ascii');
+	
+}else if(process.argv[2] == "cifra"){
+	texto = buff.toString('base64');
+	
+}else{
+	
+	console.log("erro\r\n");
+}
+
+console.log(fileContents + "\r\n" + texto)
